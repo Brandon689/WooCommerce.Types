@@ -2,7 +2,7 @@
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
-    public class ExternalProduct
+    public class WCExternalProduct
     {
         [JsonPropertyName("id")]
         public int? Id { get; set; }

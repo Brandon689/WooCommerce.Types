@@ -1,8 +1,6 @@
-﻿using Newtonsoft.Json;
-
-namespace WooCommerceAPI.Models.Services.Foundations.ProductTags
+﻿namespace WooCommerceAPI.Models.Services.Foundations.ProductTags
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class Tag
     {
         public int Id { get; set; }

@@ -1,17 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalDefaultAttribute
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int Id { get; set; }
 
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string? Name { get; set; }
 
-        [JsonProperty("option")]
+        [JsonPropertyName("option")]
         public string? Option { get; set; }
     }
 }

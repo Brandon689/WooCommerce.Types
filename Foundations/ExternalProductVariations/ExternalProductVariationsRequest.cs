@@ -1,34 +1,34 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProductVariations
 {
     public class ExternalProductVariationsRequest
     {
-        [JsonProperty("create")]
+        [JsonPropertyName("create")]
         public ExternalProductVariation[] Create { get; set; }
     }
 
     //public class ExternalProductVariation
     //{
-    //    [JsonProperty("regular_price")]
+    //    [JsonPropertyName("regular_price")]
     //    public string RegularPrice { get; set; } = string.Empty;
 
-    //    [JsonProperty("attributes")]
+    //    [JsonPropertyName("attributes")]
     //    public ExternalProductVariationAttribute[] Attributes { get; set; }
 
-    //    [JsonProperty("image")]
+    //    [JsonPropertyName("image")]
     //    public ExternalID Image { get; set; } = null;
     //}
 
     //public class ExternalProductVariationAttribute
     //{
-    //    [JsonProperty("id")]
+    //    [JsonPropertyName("id")]
     //    public int Id { get; set; } = 0;
 
-    //    [JsonProperty("name")]
+    //    [JsonPropertyName("name")]
     //    public string Name { get; set; } = string.Empty;
 
-    //    [JsonProperty("option")]
+    //    [JsonPropertyName("option")]
     //    public string Option { get; set; } = string.Empty;
     //}
 }

@@ -1,14 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalLinks
     {
-        [JsonProperty("self")]
+        [JsonPropertyName("self")]
         public ExternalSelf[] Self { get; set; }
 
-        [JsonProperty("collection")]
+        [JsonPropertyName("collection")]
         public ExternalCollection[] Collection { get; set; }
     }
 }

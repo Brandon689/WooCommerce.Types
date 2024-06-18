@@ -1,9 +1,6 @@
-﻿using Newtonsoft.Json;
-
-namespace WooCommerceAPI.Models.Services.Foundations.Products
+﻿namespace WooCommerceAPI.Models.Services.Foundations.Products
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
-    public class Image
+    public class WCImage
     {
         public int Id { get; set; }
 

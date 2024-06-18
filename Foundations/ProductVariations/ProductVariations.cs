@@ -6,6 +6,6 @@ namespace WooCommerceAPI.Models.Services.Foundations.ProductVariations
     {
         public ProductVariationsRequest Request { get; set; }
 
-        public Product Response { get; set; }
+        public WCProduct Response { get; set; }
     }
 }

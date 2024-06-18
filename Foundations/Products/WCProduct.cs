@@ -1,14 +1,8 @@
-﻿using Newtonsoft.Json;
-using WooCommerceAPI.Models.Services.Foundations.ProductTags;
+﻿using WooCommerceAPI.Models.Services.Foundations.ProductTags;
 
 namespace WooCommerceAPI.Models.Services.Foundations.Products
 {
-    public class Grimer
-    {
-
-    }
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
-    public class Product
+    public class WCProduct
     {
         public int? Id { get; set; }
 
@@ -20,7 +14,7 @@ namespace WooCommerceAPI.Models.Services.Foundations.Products
 
         public string? RegularPrice { get; set; }
 
-        public Image[]? Images { get; set; }
+        public WCImage[]? Images { get; set; }
 
         public ProductMetadata[]? MetaData { get; set; }
 
@@ -126,7 +120,7 @@ namespace WooCommerceAPI.Models.Services.Foundations.Products
 
         public string? PurchaseNote { get; set; }
 
-        public Category[]? Categories { get; set; }
+        public WCCategory[]? Categories { get; set; }
 
         public Tag[]? Tags { get; set; }
 
@@ -140,6 +134,6 @@ namespace WooCommerceAPI.Models.Services.Foundations.Products
 
         public int? MenuOrder { get; set; }
 
-        public Links? Links { get; set; }
+        public WCLinks? Links { get; set; }
     }
 }

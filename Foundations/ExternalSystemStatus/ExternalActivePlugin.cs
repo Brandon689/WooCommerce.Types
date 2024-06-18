@@ -1,32 +1,32 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSystemStatus
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalActivePlugin
     {
-        [JsonProperty("plugin")]
+        [JsonPropertyName("plugin")]
         public string? Plugin { get; set; }
 
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string? Name { get; set; }
 
-        [JsonProperty("version")]
+        [JsonPropertyName("version")]
         public string? Version { get; set; }
 
-        [JsonProperty("version_latest")]
+        [JsonPropertyName("version_latest")]
         public string? VersionLatest { get; set; }
 
-        [JsonProperty("url")]
+        [JsonPropertyName("url")]
         public string? Url { get; set; }
 
-        [JsonProperty("author_name")]
+        [JsonPropertyName("author_name")]
         public string? AuthorName { get; set; }
 
-        [JsonProperty("author_url")]
+        [JsonPropertyName("author_url")]
         public string? AuthorUrl { get; set; }
 
-        [JsonProperty("network_activated")]
+        [JsonPropertyName("network_activated")]
         public bool? NetworkActivated { get; set; }
     }
 }

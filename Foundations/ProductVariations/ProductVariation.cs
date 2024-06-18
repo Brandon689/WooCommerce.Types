@@ -94,7 +94,7 @@ namespace WooCommerceAPI.Models.Services.Foundations.ProductVariations
 
         public int? ShippingClassId { get; set; }
 
-        public Image? Image { get; set; }
+        public WCImage? Image { get; set; }
 
         public VariationAttribute[]? Attributes { get; set; }
 

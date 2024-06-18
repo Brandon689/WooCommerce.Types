@@ -1,26 +1,26 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSettings
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalSetting
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string? Id { get; set; }
 
-        [JsonProperty("label")]
+        [JsonPropertyName("label")]
         public string? Label { get; set; }
 
-        [JsonProperty("description")]
+        [JsonPropertyName("description")]
         public string? Description { get; set; }
 
-        [JsonProperty("parent_id")]
+        [JsonPropertyName("parent_id")]
         public string? ParentId { get; set; }
 
-        [JsonProperty("sub_groups")]
+        [JsonPropertyName("sub_groups")]
         public string[]? SubGroups { get; set; }
 
-        //[JsonProperty("_links")]
+        //[JsonPropertyName("_links")]
         //public Links Links { get; set; }
     }
 }

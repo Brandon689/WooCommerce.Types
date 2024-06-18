@@ -1,20 +1,20 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSystemStatus
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalDatabase
     {
-        [JsonProperty("wc_database_version")]
+        [JsonPropertyName("wc_database_version")]
         public string? WcDatabaseVersion { get; set; }
 
-        [JsonProperty("database_prefix")]
+        [JsonPropertyName("database_prefix")]
         public string? DatabasePrefix { get; set; }
 
-        [JsonProperty("maxmind_geoip_database")]
+        [JsonPropertyName("maxmind_geoip_database")]
         public string? MaxmindGeoipDatabase { get; set; }
 
-        [JsonProperty("database_tables")]
+        [JsonPropertyName("database_tables")]
         public ExternalDatabaseTables? DatabaseTables { get; set; }
     }
 }

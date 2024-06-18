@@ -1,50 +1,49 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.Orders
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalLineItem
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int? Id { get; set; }
 
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string? Name { get; set; }
 
-        [JsonProperty("product_id")]
+        [JsonPropertyName("product_id")]
         public int? ProductId { get; set; }
 
-        [JsonProperty("variation_id")]
+        [JsonPropertyName("variation_id")]
         public int? VariationId { get; set; }
 
-        [JsonProperty("quantity")]
+        [JsonPropertyName("quantity")]
         public int? Quantity { get; set; }
 
-        [JsonProperty("tax_class")]
+        [JsonPropertyName("tax_class")]
         public string? TaxClass { get; set; }
 
-        [JsonProperty("subtotal")]
+        [JsonPropertyName("subtotal")]
         public string? Subtotal { get; set; }
 
-        [JsonProperty("subtotal_tax")]
+        [JsonPropertyName("subtotal_tax")]
         public string? SubtotalTax { get; set; }
 
-        [JsonProperty("total")]
+        [JsonPropertyName("total")]
         public string? Total { get; set; }
 
-        [JsonProperty("total_tax")]
+        [JsonPropertyName("total_tax")]
         public string? TotalTax { get; set; }
 
-        [JsonProperty("taxes")]
+        [JsonPropertyName("taxes")]
         public List<Taxis>? Taxes { get; set; }
 
-        [JsonProperty("meta_data")]
+        [JsonPropertyName("meta_data")]
         public List<MetaData>? MetaData { get; set; }
 
-        [JsonProperty("sku")]
+        [JsonPropertyName("sku")]
         public string? Sku { get; set; }
 
-        [JsonProperty("price")]
+        [JsonPropertyName("price")]
         public string? Price { get; set; }
     }
 }

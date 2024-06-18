@@ -1,18 +1,16 @@
-﻿using Newtonsoft.Json;
-using System.Text.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalProductMetadata
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int? Id { get; set; }
 
-        [JsonProperty("key")]
+        [JsonPropertyName("key")]
         public string? Key { get; set; }
 
-        [JsonProperty("value")]
+        [JsonPropertyName("value")]
         public object? Value { get; set; }
     }
 }

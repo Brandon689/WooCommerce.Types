@@ -1,29 +1,29 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSystemStatus
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalSystemStatus
     {
-        [JsonProperty("environment")]
+        [JsonPropertyName("environment")]
         public ExternalEnvironment? Environment { get; set; }
 
-        [JsonProperty("database")]
+        [JsonPropertyName("database")]
         public ExternalDatabase? Database { get; set; }
 
-        [JsonProperty("active_plugins")]
+        [JsonPropertyName("active_plugins")]
         public List<ExternalActivePlugin>? ActivePlugins { get; set; }
 
-        [JsonProperty("theme")]
+        [JsonPropertyName("theme")]
         public ExternalTheme? Theme { get; set; }
 
-        [JsonProperty("settings")]
+        [JsonPropertyName("settings")]
         public ExternalSettings? Settings { get; set; }
 
-        [JsonProperty("security")]
+        [JsonPropertyName("security")]
         public ExternalSecurity? Security { get; set; }
 
-        [JsonProperty("pages")]
+        [JsonPropertyName("pages")]
         public ExternalPage[]? Pages { get; set; }
     }
 }

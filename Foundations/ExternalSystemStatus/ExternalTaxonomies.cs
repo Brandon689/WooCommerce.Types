@@ -1,20 +1,20 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSystemStatus
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalTaxonomies
     {
-        [JsonProperty("external")]
+        [JsonPropertyName("external")]
         public string External { get; set; }
 
-        [JsonProperty("grouped")]
+        [JsonPropertyName("grouped")]
         public string Grouped { get; set; }
 
-        [JsonProperty("simple")]
+        [JsonPropertyName("simple")]
         public string Simple { get; set; }
 
-        [JsonProperty("variable")]
+        [JsonPropertyName("variable")]
         public string Variable { get; set; }
     }
 }

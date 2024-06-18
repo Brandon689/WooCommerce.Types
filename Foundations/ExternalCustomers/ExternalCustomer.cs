@@ -1,58 +1,57 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using WooCommerceAPI.Models.Services.Foundations.ExternalProducts;
 using WooCommerceAPI.Models.Services.Foundations.Orders;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalCustomers
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalCustomer
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int? Id { get; set; }
 
-        [JsonProperty("date_created")]
+        [JsonPropertyName("date_created")]
         public DateTime? DateCreated { get; set; }
 
-        [JsonProperty("date_created_gmt")]
+        [JsonPropertyName("date_created_gmt")]
         public DateTime? DateCreatedGmt { get; set; }
 
-        [JsonProperty("date_modified")]
+        [JsonPropertyName("date_modified")]
         public DateTime? DateModified { get; set; }
 
-        [JsonProperty("date_modified_gmt")]
+        [JsonPropertyName("date_modified_gmt")]
         public DateTime? DateModifiedGmt { get; set; }
 
-        [JsonProperty("email")]
+        [JsonPropertyName("email")]
         public string? Email { get; set; }
 
-        [JsonProperty("first_name")]
+        [JsonPropertyName("first_name")]
         public string? FirstName { get; set; }
 
-        [JsonProperty("last_name")]
+        [JsonPropertyName("last_name")]
         public string? LastName { get; set; }
 
-        [JsonProperty("role")]
+        [JsonPropertyName("role")]
         public string? Role { get; set; }
 
-        [JsonProperty("username")]
+        [JsonPropertyName("username")]
         public string? Username { get; set; }
 
-        [JsonProperty("billing")]
+        [JsonPropertyName("billing")]
         public ExternalBilling? Billing { get; set; }
 
-        [JsonProperty("shipping")]
+        [JsonPropertyName("shipping")]
         public ExternalShipping? Shipping { get; set; }
 
-        [JsonProperty("is_paying_customer")]
+        [JsonPropertyName("is_paying_customer")]
         public bool? IsPayingCustomer { get; set; }
 
-        [JsonProperty("avatar_url")]
+        [JsonPropertyName("avatar_url")]
         public string? AvatarUrl { get; set; }
 
-        [JsonProperty("meta_data")]
+        [JsonPropertyName("meta_data")]
         public List<ExternalProductMetadata>? MetaData { get; set; }
 
-        [JsonProperty("_links")]
+        [JsonPropertyName("_links")]
         public ExternalLinks? Links { get; set; }
     }
 }

@@ -1,11 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalSelf
     {
-        [JsonProperty("href")]
+        [JsonPropertyName("href")]
         public string? Href { get; set; }
     }
 }

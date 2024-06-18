@@ -1,8 +1,6 @@
-﻿using Newtonsoft.Json;
-
-namespace WooCommerceAPI.Models.Services.Foundations.Products
+﻿namespace WooCommerceAPI.Models.Services.Foundations.Products
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ProductAttribute
     {
         public int Id { get; set; } = 0;

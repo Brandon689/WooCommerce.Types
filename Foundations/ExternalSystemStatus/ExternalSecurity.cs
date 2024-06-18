@@ -1,14 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSystemStatus
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalSecurity
     {
-        [JsonProperty("secure_connection")]
+        [JsonPropertyName("secure_connection")]
         public bool? SecureConnection { get; set; }
 
-        [JsonProperty("hide_errors")]
+        [JsonPropertyName("hide_errors")]
         public bool? HideErrors { get; set; }
     }
 }

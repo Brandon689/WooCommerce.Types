@@ -1,29 +1,28 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.Orders
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalShippingLine
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int? Id { get; set; }
 
-        [JsonProperty("method_title")]
+        [JsonPropertyName("method_title")]
         public string? MethodTitle { get; set; }
 
-        [JsonProperty("method_id")]
+        [JsonPropertyName("method_id")]
         public string? MethodId { get; set; }
 
-        [JsonProperty("total")]
+        [JsonPropertyName("total")]
         public string? Total { get; set; }
 
-        [JsonProperty("total_tax")]
+        [JsonPropertyName("total_tax")]
         public string? TotalTax { get; set; }
 
-        [JsonProperty("taxes")]
+        [JsonPropertyName("taxes")]
         public List<object>? Taxes { get; set; }
 
-        [JsonProperty("meta_data")]
+        [JsonPropertyName("meta_data")]
         public List<object>? MetaData { get; set; }
     }
 }

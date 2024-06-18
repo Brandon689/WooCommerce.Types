@@ -1,17 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalDimensions
     {
-        [JsonProperty("length")]
+        [JsonPropertyName("length")]
         public string? Length { get; set; }
 
-        [JsonProperty("width")]
+        [JsonPropertyName("width")]
         public string? Width { get; set; }
 
-        [JsonProperty("height")]
+        [JsonPropertyName("height")]
         public string? Height { get; set; }
     }
 }

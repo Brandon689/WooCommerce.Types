@@ -86,7 +86,7 @@
 
         public List<object>? Refunds { get; set; }
 
-        //[JsonProperty("_links")]
+        //[JsonPropertyName("_links")]
         //public Links Links { get; set; }
     }
 }

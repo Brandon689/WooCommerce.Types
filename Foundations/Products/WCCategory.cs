@@ -1,12 +1,11 @@
 ﻿namespace WooCommerceAPI.Models.Services.Foundations.Products
 {
-
-    public class DefaultAttribute
+    public class WCCategory
     {
         public int Id { get; set; }
 
         public string? Name { get; set; }
 
-        public string? Option { get; set; }
+        public string? Slug { get; set; }
     }
 }

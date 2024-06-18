@@ -16,9 +16,9 @@ public class Converter
         _mapper = config.CreateMapper();
     }
 
-    public Product ConvertSourceToDestination(ExternalProduct source)
+    public WCProduct ConvertSourceToDestination(WCExternalProduct source)
     {
-        return _mapper.Map<Product>(source);
+        return _mapper.Map<WCProduct>(source);
     }
 }
 
@@ -32,14 +32,19 @@ public class WCMapper
         _mapper = config.CreateMapper();
     }
 
-    public Product ConvertToProduct(ExternalProduct source)
+    public WCProduct ConvertToProduct(WCExternalProduct source)
     {
-        return _mapper.Map<Product>(source);
+        return _mapper.Map<WCProduct>(source);
     }
 
-    public ExternalProduct ConvertToExternalProduct(Product source)
+    public WCExternalProduct ConvertToExternalProduct(WCProduct source)
     {
-        return _mapper.Map<ExternalProduct>(source);
+        return _mapper.Map<WCExternalProduct>(source);
+    }
+
+    public ProductVariation ConvertToProductVariations(ExternalProductVariation source)
+    {
+        return _mapper.Map<ProductVariation>(source);
     }
 
     public ExternalProductVariationsRequest ConvertToExternalProductVariations(ProductVariationsRequest source)
@@ -52,27 +57,27 @@ public class ExtProfile : Profile
 {
     public ExtProfile()
     {
-        CreateMap<ExternalProduct, Product>();
+        CreateMap<WCExternalProduct, WCProduct>();
         CreateMap<ExternalProductAttribute, ProductAttribute>();
         CreateMap<ExternalProductVariation, ProductVariation>();
-        CreateMap<ExternalImage, Image>();
+        CreateMap<ExternalImage, WCImage>();
         CreateMap<ExternalProductMetadata, ProductMetadata>();
         CreateMap<ExternalDimensions, Dimensions>();
-        CreateMap<ExternalCategory, Category>();
-        CreateMap<ExternalLinks, Links>();
-        CreateMap<ExternalSelf, Self>();
-        CreateMap<ExternalCollection, Collection>();
+        CreateMap<ExternalCategory, WCCategory>();
+        CreateMap<ExternalLinks, WCLinks>();
+        CreateMap<ExternalSelf, WCSelf>();
+        CreateMap<ExternalCollection, WCCollection>();
 
-        CreateMap<Product, ExternalProduct>();
+        CreateMap<WCProduct, WCExternalProduct>();
         CreateMap<ProductAttribute, ExternalProductAttribute>();
         CreateMap<ProductVariation, ExternalProductVariation>();
-        CreateMap<Image, ExternalImage>();
+        CreateMap<WCImage, ExternalImage>();
         CreateMap<ProductMetadata, ExternalProductMetadata>();
         CreateMap<Dimensions, ExternalDimensions>();
-        CreateMap<Category, ExternalCategory>();
-        CreateMap<Links, ExternalLinks>();
-        CreateMap<Self, ExternalSelf>();
-        CreateMap<Collection, ExternalCollection>();
+        CreateMap<WCCategory, ExternalCategory>();
+        CreateMap<WCLinks, ExternalLinks>();
+        CreateMap<WCSelf, ExternalSelf>();
+        CreateMap<WCCollection, ExternalCollection>();
 
 
         CreateMap<ExternalProductVariationsRequest, ProductVariationsRequest>();

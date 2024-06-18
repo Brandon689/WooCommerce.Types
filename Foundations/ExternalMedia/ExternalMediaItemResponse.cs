@@ -1,25 +1,25 @@
-﻿//using Newtonsoft.Json;
+﻿//using System.Text.Json.Serialization;
 
 //namespace WooCommerceAPI.Models.Services.Foundations.ExternalMedia
 //{
 
 //    public class ExternalMediaItemResponse
 //    {
-//        [JsonProperty("id")]
+//        [JsonPropertyName("id")]
 //        public int Id { get; set; } = 0;
 
 //        internal DateTime date { get; set; }
 
 //        internal DateTime date_gmt { get; set; }
 
-//        [JsonProperty("guid")]
+//        [JsonPropertyName("guid")]
 //        internal Guid Guid { get; set; }
 
 //        internal DateTime modified { get; set; }
 
 //        internal DateTime modified_gmt { get; set; }
 
-//        [JsonProperty("slug")]
+//        [JsonPropertyName("slug")]
 //        public string slug { get; set; }
 
 //        public string status { get; set; }
@@ -28,7 +28,7 @@
 
 //        public string link { get; set; }
 
-//        [JsonProperty("title")]
+//        [JsonPropertyName("title")]
 //        internal Title Title { get; set; }
 
 //        public int author { get; set; }
@@ -122,10 +122,10 @@
 
 //    public class Guid
 //    {
-//        [JsonProperty("rendered")]
+//        [JsonPropertyName("rendered")]
 //        public string rendered { get; set; }
 
-//        [JsonProperty("raw")]
+//        [JsonPropertyName("raw")]
 
 //        public string raw { get; set; }
 //    }
@@ -169,10 +169,10 @@
 
 //        internal List<Reply> replies { get; set; }
 
-//        [JsonProperty("wp:action-unfiltered-html")]
+//        [JsonPropertyName("wp:action-unfiltered-html")]
 //        internal List<WpActionUnfilteredHtml> wpactionunfilteredhtml { get; set; }
 
-//        [JsonProperty("wp:action-assign-author")]
+//        [JsonPropertyName("wp:action-assign-author")]
 //        internal List<WpActionAssignAuthor> wpactionassignauthor { get; set; }
 
 //        internal List<Cury> curies { get; set; }
@@ -214,10 +214,10 @@
 
 //    public class Title
 //    {
-//        [JsonProperty("raw")]
+//        [JsonPropertyName("raw")]
 
 //        public string Raw { get; set; }
-//        [JsonProperty("rendered")]
+//        [JsonPropertyName("rendered")]
 
 //        public string Rendered { get; set; }
 //    }

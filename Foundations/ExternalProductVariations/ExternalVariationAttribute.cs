@@ -1,19 +1,19 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProductVariations
 {
     public class ExternalVariationAttribute
     {
-        [JsonProperty("Id")]
+        [JsonPropertyName("Id")]
         public int Id { get; set; }
 
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        [JsonProperty("slug")]
+        [JsonPropertyName("slug")]
         public string Slug { get; set; }
 
-        [JsonProperty("option")]
+        [JsonPropertyName("option")]
         public string Option { get; set; }
     }
 }

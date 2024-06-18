@@ -1,32 +1,32 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSystemStatus
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalPage
     {
-        [JsonProperty("page_name")]
+        [JsonPropertyName("page_name")]
         public string? PageName { get; set; }
 
-        [JsonProperty("page_id")]
+        [JsonPropertyName("page_id")]
         public string? PageId { get; set; }
 
-        [JsonProperty("page_set")]
+        [JsonPropertyName("page_set")]
         public bool? PageSet { get; set; }
 
-        [JsonProperty("page_exists")]
+        [JsonPropertyName("page_exists")]
         public bool? PageExists { get; set; }
 
-        [JsonProperty("page_visible")]
+        [JsonPropertyName("page_visible")]
         public bool? PageVisible { get; set; }
 
-        [JsonProperty("shortcode")]
+        [JsonPropertyName("shortcode")]
         public string? Shortcode { get; set; }
 
-        [JsonProperty("shortcode_required")]
+        [JsonPropertyName("shortcode_required")]
         public bool? ShortcodeRequired { get; set; }
 
-        [JsonProperty("shortcode_present")]
+        [JsonPropertyName("shortcode_present")]
         public bool? ShortcodePresent { get; set; }
     }
 }

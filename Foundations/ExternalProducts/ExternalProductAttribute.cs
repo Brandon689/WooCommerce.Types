@@ -1,25 +1,25 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
     public class ExternalProductAttribute
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int Id { get; set; } = 0;
 
-        [JsonProperty("position")]
+        [JsonPropertyName("position")]
         public int Position { get; set; } = 0;
 
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        [JsonProperty("visible")]
+        [JsonPropertyName("visible")]
         public bool Visible { get; set; } = true;
 
-        [JsonProperty("variation")]
+        [JsonPropertyName("variation")]
         public bool Variation { get; set; }
 
-        [JsonProperty("options")]
+        [JsonPropertyName("options")]
         public string[] Options { get; set; }
     }
 }

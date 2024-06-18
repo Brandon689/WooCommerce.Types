@@ -1,32 +1,31 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalProducts
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class ExternalImage
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int Id { get; set; }
 
-        [JsonProperty("date_created")]
+        [JsonPropertyName("date_created")]
         public DateTime? DateCreated { get; set; }
 
-        [JsonProperty("date_created_gmt")]
+        [JsonPropertyName("date_created_gmt")]
         public DateTime? DateCreatedGmt { get; set; }
 
-        [JsonProperty("date_modified")]
+        [JsonPropertyName("date_modified")]
         public DateTime? DateModified { get; set; }
 
-        [JsonProperty("date_modified_gmt")]
+        [JsonPropertyName("date_modified_gmt")]
         public DateTime? DateModifiedGmt { get; set; }
 
-        [JsonProperty("src")]
+        [JsonPropertyName("src")]
         public string? Src { get; set; }
 
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string? Name { get; set; }
 
-        [JsonProperty("alt")]
+        [JsonPropertyName("alt")]
         public string? Alt { get; set; }
 
         public ExternalImage()

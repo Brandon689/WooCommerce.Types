@@ -1,47 +1,47 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace WooCommerceAPI.Models.Services.Foundations.ExternalSystemStatus
 {
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     public class ExternalDatabaseTables
     {
-        [JsonProperty("woocommerce_sessions")]
+        [JsonPropertyName("woocommerce_sessions")]
         public bool? WoocommerceSessions { get; set; }
 
-        [JsonProperty("woocommerce_api_keys")]
+        [JsonPropertyName("woocommerce_api_keys")]
         public bool? WoocommerceApiKeys { get; set; }
 
-        [JsonProperty("woocommerce_attribute_taxonomies")]
+        [JsonPropertyName("woocommerce_attribute_taxonomies")]
         public bool? WoocommerceAttributeTaxonomies { get; set; }
 
-        [JsonProperty("woocommerce_downloadable_product_permissions")]
+        [JsonPropertyName("woocommerce_downloadable_product_permissions")]
         public bool? WoocommerceDownloadableProductPermissions { get; set; }
 
-        [JsonProperty("woocommerce_order_items")]
+        [JsonPropertyName("woocommerce_order_items")]
         public bool? WoocommerceOrderItems { get; set; }
 
-        [JsonProperty("woocommerce_order_itemmeta")]
+        [JsonPropertyName("woocommerce_order_itemmeta")]
         public bool? WoocommerceOrderItemmeta { get; set; }
 
-        [JsonProperty("woocommerce_tax_rates")]
+        [JsonPropertyName("woocommerce_tax_rates")]
         public bool? WoocommerceTaxRates { get; set; }
 
-        [JsonProperty("woocommerce_tax_rate_locations")]
+        [JsonPropertyName("woocommerce_tax_rate_locations")]
         public bool? WoocommerceTaxRateLocations { get; set; }
 
-        [JsonProperty("woocommerce_shipping_zones")]
+        [JsonPropertyName("woocommerce_shipping_zones")]
         public bool? WoocommerceShippingZones { get; set; }
 
-        [JsonProperty("woocommerce_shipping_zone_locations")]
+        [JsonPropertyName("woocommerce_shipping_zone_locations")]
         public bool? WoocommerceShippingZoneLocations { get; set; }
 
-        [JsonProperty("woocommerce_shipping_zone_methods")]
+        [JsonPropertyName("woocommerce_shipping_zone_methods")]
         public bool? WoocommerceShippingZoneMethods { get; set; }
 
-        [JsonProperty("woocommerce_payment_tokens")]
+        [JsonPropertyName("woocommerce_payment_tokens")]
         public bool? WoocommercePaymentTokens { get; set; }
 
-        [JsonProperty("woocommerce_payment_tokenmeta")]
+        [JsonPropertyName("woocommerce_payment_tokenmeta")]
         public bool? WoocommercePaymentTokenmeta { get; set; }
     }
 }
